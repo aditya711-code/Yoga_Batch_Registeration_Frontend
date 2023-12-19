@@ -15,6 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl'
 import LinearProgress from '@mui/material/LinearProgress';
+import { BASE_URL } from "./helper";
 const subscribeSchema = yup.object().shape({
     name: yup.string().required("required"),
     email: yup.string().email("invalid email").required("required"),
@@ -38,7 +39,7 @@ const Subscribe = () => {
     const [batches, setBatches] = useState([])
     const [flag, setFlag] = useState(false);
     const getBatches = async () => {
-        const response = await fetch('http://localhost:3001/batch')
+        const response = await fetch(`${BASE_URL}/batch`)
         const data = await response.json()
         setBatches(data)
     }
@@ -54,7 +55,7 @@ const Subscribe = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(values),
         };
-        const response = await fetch('http://localhost:3001/subscribe', requestOptions)
+        const response = await fetch(`${BASE_URL}/subscribe`, requestOptions)
         const savedUser = await response.json();
         console.log("savedUser", savedUser)
         if (savedUser.success == 'Subscribed') {
