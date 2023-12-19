@@ -17,5 +17,5 @@ After subscription:
 <img width="938" alt="image" src="https://github.com/aditya711-code/Yoga_Batch_Registeration_Frontend/assets/83772267/3adcab8e-76b8-4346-829f-91666e1bf167">
 
 
-# Backend:https://github.com/aditya711-code/Yoga_Batch_Registeration
-# Backend Hosted :https://yoga-registeration-form-server.onrender.com/
+- Backend:https://github.com/aditya711-code/Yoga_Batch_Registeration
+- Backend Hosted :https://yoga-registeration-form-server.onrender.com/
